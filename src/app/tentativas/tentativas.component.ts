@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+  // tslint:disable:semicolon
+import { Component, OnInit } from '@angular/core'
 
 @Component({
   selector: 'app-tentativas',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tentativas.component.css']
 })
 export class TentativasComponent implements OnInit {
+
+  public coracaoVazio: String = '/assets/coracao_vazio.png'
+  public coracaoCheio: String = '/assets/coracao_cheio.png'
 
   constructor() { }
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+  // tslint:disable:semicolon
 
 @Component({
   selector: 'app-topo',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopoComponent implements OnInit {
 
+  public titulo: String = 'Aprendendo Inglês'
   constructor() { }
 
   ngOnInit() {

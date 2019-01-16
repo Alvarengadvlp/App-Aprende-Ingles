@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+ // tslint:disable:semicolon
+// tslint:disable:no-inferrable-types
+
+import { Component, OnInit , Input} from '@angular/core';
 
 @Component({
   selector: 'app-progresso',
@@ -6,6 +9,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./progresso.component.css']
 })
 export class ProgressoComponent implements OnInit {
+
+
+  @Input() public progress: number = 0
 
   constructor() { }
 
