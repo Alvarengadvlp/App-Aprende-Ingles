@@ -2,7 +2,7 @@
 // tslint:disable:triple-equals
 // tslint:disable:no-inferrable-types
 // tslint:disable:no-inferrable-types
-import { Component, OnInit } from '@angular/core'
+import { Component, OnInit , EventEmitter, Output } from '@angular/core'
 import { Frase } from '../shared/frase.model'
 import { FRASES } from './frase-mock'
 @Component({
@@ -24,6 +24,8 @@ export class PainelComponent implements OnInit {
   public progress: number = 0
   public tentativas: number = 3
 
+  @Output() public encerrarJogo: EventEmitter<string> = new EventEmitter()
+
   constructor() {
     this.updateRound()
    }
@@ -44,7 +46,7 @@ export class PainelComponent implements OnInit {
       // progresso
       this.progress = this.progress + (100 / this.frases.length)
       if (this.round === 4) {
-        alert('Parabéns !! , você concluiu as traduções com sucesso ! .')
+        this.encerrarJogo.emit('vitoria')
       }
 
       // atualiza o objeto rodadaFrase
@@ -54,7 +56,7 @@ export class PainelComponent implements OnInit {
         this.tentativas--
        alert('Tradução incorreta ! , tente novamente.')
        if (this.tentativas == -1) {
-        alert('loser - você usou todas as tentativas')
+        this.encerrarJogo.emit('Derrota')
        }
        }
   }

@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app1';
+  public encerraJogo(tipo: string): void {
+    console.log(tipo);
+  }
 }
