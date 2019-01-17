@@ -54,9 +54,9 @@ export class PainelComponent implements OnInit {
 
     } else {
         this.tentativas--
-       alert('Tradução incorreta ! , tente novamente.')
+       alert('Tradução incorreta.. , tente novamente')
        if (this.tentativas == -1) {
-        this.encerrarJogo.emit('Derrota')
+        this.encerrarJogo.emit('derrota')
        }
        }
   }
