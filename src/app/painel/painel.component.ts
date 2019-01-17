@@ -39,7 +39,7 @@ export class PainelComponent implements OnInit {
 
   checkAnswer(): void {
 
-    if (this.roundFrase.frasePtBr == this.resposta) {
+    if (this.roundFrase.frasePtBr == this.resposta.toLowerCase()) {
       // troca  pergunta da rodada
       this.round++
 
